@@ -1,4 +1,4 @@
-﻿ function month_minus()
+﻿ function month_minus() //листаем месяцы влево
 {
 	var monthOb = document.getElementById('month');
 	var yearOb = document.getElementById('year');
@@ -30,7 +30,7 @@
 	enlight_event();
 }
 
-function month_plus()
+function month_plus() //листаем месяцы вправо
 {
 	var monthOb = document.getElementById('month');
 	var yearOb = document.getElementById('year');
@@ -73,17 +73,17 @@ function getDayNameById(i)
 	return arDays[i];
 }
 
-function add_del_event_show(el)
+function add_del_event_show(el) //форма добавления события на ячейку
 {
 	var cell = [];
-	var cellsAll = document.getElementById('cells_list').childNodes;
+	var cellsAll = document.getElementById('cells_list').childNodes; //все ячейки
 	 
-	for(var k = 0; k < cellsAll.length; k++)
+	for(var k = 0; k < cellsAll.length; k++) 
 	{
-		cell = cellsAll[k].childNodes;
+		cell = cellsAll[k].childNodes; //дочерние элементы каждой ячейки
 		for(var m = 0; m < cell.length; m++)
 		{
-			if(cell[m].getAttribute('class').substr(0,5) == 'hover' && cell[m].getAttribute('style') == 'display: block')
+			if(cell[m].getAttribute('class').substr(0,5) == 'hover')
 			{
 				cell[m].setAttribute('style', 'display: none');
 			}
@@ -93,7 +93,7 @@ function add_del_event_show(el)
 		cellsAll[k].setAttribute('style', ''); 
 	}
 	
-	setBorder(cellsAll, el);
+	setBorder(cellsAll, el); //установка границы при клике
 	
 	for(var i = 0; i < el.childNodes.length; i++)
 	{
@@ -109,7 +109,7 @@ function add_del_event_show(el)
 
 function setBorder(cellsAll, el)
 {
-	var ind = Array.prototype.indexOf.call(el.parentNode.childNodes, el);
+	var ind = Array.prototype.indexOf.call(el.parentNode.childNodes, el); //номер ячейки по которой кликнули
 	var prev = ind - 7;
 	var left = ind - 1;
 	
@@ -140,9 +140,9 @@ function setBorder(cellsAll, el)
 	}
 }
 
-function add_del_event_hide(event, cl)
+function add_del_event_hide(event, cl) //скрыть форму добавления события на ячейку
 {
-	cl.parentNode.setAttribute('style', 'display: none');
+	cl.parentNode.parentNode.setAttribute('style', 'display: none');
 	event.stopPropagation ? event.stopPropagation() : (event.cancelBubble=true);
 	
 	var cellsAll = document.getElementById('cells_list').childNodes;
@@ -163,7 +163,7 @@ function old_bckgr(btn)
 }
 
 
-function create_form_show()
+function create_form_show() //форма добавления события при клике на Добавить
 {
 	document.getElementById('cr_form').setAttribute('style', 'display: block');
 }
@@ -173,7 +173,7 @@ function create_form_hide()
 	document.getElementById('cr_form').setAttribute('style', 'display: none');
 }
 
-function paintCalendar(i, innerText, date, monthNow)
+function paintCalendar(i, innerText, date, monthNow) //отрисовка календаря
 {
 	var parentElem = document.getElementById('cells_list');
 	var newDiv = document.createElement('div');
@@ -215,7 +215,7 @@ function paintCalendar(i, innerText, date, monthNow)
 	newDiv.appendChild(newSpan);
 	newDiv.appendChild(newDivClear);
 	
-	
+	//отрисовка всплывающих форм
 	if((i >= 0 && i <= 3) || (i >= 7 && i <= 10) || (i >= 14 && i <= 17)){
 		paintHover(newDiv, 'hover_left');
 	}
@@ -354,7 +354,7 @@ function add_event()
 	else 
 	{
 		var year = document.getElementById('year').innerHTML;
-		var hap = document.getElementById('create_event_inp').value + ' ' + year + ';';
+		var hap = document.getElementById('create_event_inp').value + ' ' + year + ';'; //добавляем год в конец события, введенного пользователем
 				
 		var hapExists = localStorage.getItem('happening');
 		var hapNew;
@@ -370,7 +370,7 @@ function add_event()
 		{
 			if (e == QUOTA_EXCEEDED_ERR) 
 			{
-				alert('Закончилось место'); //данные не сохранены, так как закончилось доступное место
+				alert('Закончилось место');
 			}
 		}
 				
@@ -379,7 +379,7 @@ function add_event()
 	}
 }
 
-function enlight_event()
+function enlight_event() //подсветить событие
 {
 	var month = document.getElementById('month').innerHTML;
 	var year = document.getElementById('year').innerHTML;
@@ -422,7 +422,7 @@ function enlight_event()
 				for(var j = 0; j < result.length; j++)
 				{
 					var arResult = [];
-					arResult = result[j].split(' ');
+					arResult = result[j].split(' '); //разбиваем каждое событие по пробелу, чтобы выцепить дату, год и т.д.
 					var cell = allCells[i].childNodes;
 					
 					var resultBase = arResult[1].substring(0, arResult[1].length - 1);
@@ -436,7 +436,7 @@ function enlight_event()
 						{
 							dayNumber = cell[k].innerHTML;
 							
-							var evText = "";
+							var evText = ""; //текст события для ячейки
 							var yearFlag = false;
 							var resYear = arResult[arResult.length-1];
 												
