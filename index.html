@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="jquery.nicescroll.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+
+<title></title>
+</head>
+<body>
+	<div class="BackSpace">
+		<div class="hat">
+			<div class="btns_main_margin">
+				<div class="btn_add" onclick="create_form_show()" onmousedown="ch_bckgr(this)" onmouseup="old_bckgr(this)"></div>
+				<div class="btn_update"></div>
+				<div class="create_form" id="cr_form" style="display:none;">
+					<div class="corner"></div>
+					<div class="create_form_block">
+						<div class="ref_close" onclick="create_form_hide()"></div>
+						<div class="create">
+							<input id="create_event_inp" type="text" name="q" onblur="if (this.value == '') {this.value = '5 марта, 14:00, День рождение';}" onfocus="if(this.value == '5 марта, 14:00, День рождение') {this.value = '';}" value="5 марта, 14:00, День рождение" autocomplete="off" class="text" size="34" maxlength="50"/ >
+						</div>	
+						<input type="button" class="btn_create" onclick="add_event()"/>
+					</div>
+				</div>
+				<div class="search">
+					<input type="text" name="q" onblur="if (this.value == '') {this.value = 'Событие, дата или участник';}" onfocus="if(this.value == 'Событие, дата или участник') {this.value = '';}" value="Событие, дата или участник" autocomplete="off" class="text" size="30" maxlength="50">
+				</div>
+				<div class="search_suggestions">
+					<div class="corner"></div>
+					<div class="search_suggestions_block">
+						<div class="search_suggestions_scroll">
+							<div class="suggestion selected">
+								<div class="suggestion_title">Митинг на Болотной</div>
+								<div class="suggestion_date">6 марта</div>
+							</div>
+							<div class="separator"></div>
+							<div class="suggestion">
+								<div class="suggestion_title">Митинг на Болотной</div>
+								<div class="suggestion_date">6 марта</div>
+							</div>
+							<div class="separator"></div>
+							<div class="suggestion">
+								<div class="suggestion_title">Митинг на Болотной</div>
+								<div class="suggestion_date">6 марта</div>
+							</div>
+							<div class="separator"></div>
+							<div class="suggestion">
+								<div class="suggestion_title">Митинг на Болотной</div>
+								<div class="suggestion_date">6 марта</div>
+							</div>
+							<div class="separator"></div>
+							<div class="suggestion">
+								<div class="suggestion_title">Митинг на Болотной</div>
+								<div class="suggestion_date">6 марта</div>
+							</div>
+							<div class="separator"></div>
+							<div class="suggestion">
+								<div class="suggestion_title">Митинг на Болотной</div>
+								<div class="suggestion_date">6 марта</div>
+							</div>
+							<div class="separator"></div>
+							<div class="suggestion">
+								<div class="suggestion_title">Митинг на Болотной</div>
+								<div class="suggestion_date">6 марта</div>
+							</div>
+							<div class="separator"></div>
+							<div class="suggestion">
+								<div class="suggestion_title">Митинг на Болотной</div>
+								<div class="suggestion_date">6 марта</div>
+							</div>
+							<div class="separator"></div>
+							<div class="suggestion">
+								<div class="suggestion_title">Митинг на Болотной</div>
+								<div class="suggestion_date">6 марта</div>
+							</div>
+							<div class="separator"></div>
+							<div class="suggestion">
+								<div class="suggestion_title">Митинг на Болотной</div>
+								<div class="suggestion_date">6 марта</div>
+							</div>
+							<div class="separator"></div>
+							<div class="suggestion">
+								<div class="suggestion_title">Митинг на Болотной</div>
+								<div class="suggestion_date">6 марта</div>
+							</div>
+							<div class="separator"></div>
+							<div class="suggestion">
+								<div class="suggestion_title">Митинг на Болотной</div>
+								<div class="suggestion_date">6 марта</div>
+							</div>
+							<div class="separator"></div>
+							<div class="suggestion">
+								<div class="suggestion_title">Митинг на Болотной</div>
+								<div class="suggestion_date">6 марта</div>
+							</div>
+							<div class="separator"></div>
+							<div class="suggestion">
+								<div class="suggestion_title">Митинг на Болотной</div>
+								<div class="suggestion_date">6 марта</div>
+							</div>
+							<div class="separator"></div>
+							<div class="suggestion">
+								<div class="suggestion_title">Митинг на Болотной</div>
+								<div class="suggestion_date">6 марта</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="btn_search"></div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="calendar">
+			<div class="btn_left_month" onclick="month_minus();"></div>
+			<div id="month">Март</div><div id="year">2013</div>
+			<div class="btn_right_month" onclick="month_plus();"></div>
+			
+			<div class="btn_today" onclick="calendar_today()"></div>				
+			<div class="clear"></div>
+			<div class="cells_all" id="cells_list">
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+			

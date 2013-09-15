@@ -1,0 +1,81 @@
+body { width:100%; height:100%; position:absolute; min-width:1000px;}
+body , a , form , input , textarea , select , div , p , img , h1 , h2 , h3 , h4 , h5 , h6 { margin:0; padding:0; outline:none; }
+body , div , p , img , h1 , h2 , h3 , h4 , h5 , h6 , ul , li , table , td { cursor:default; }
+.clear{clear:both;}
+.BackSpace { width:100%; min-width:1000px; position:relative; height: auto !important; min-height:100%;}
+.hat
+{
+	width: 100%;
+	height: 106px;
+	background: url(img/head.png) 0 0 repeat-x;
+}
+		.btns_main_margin{width: 901px; margin: auto; position:relative;}
+			.btn_add, .btn_update{float:left; width: 82px; height: 28px; margin-top: 56px;}
+			.btn_add{background: url(img/btn_add.png) 0 0 no-repeat;}
+			.btn_update{margin-left: 8px; background: url(img/btn_update.png) 0 0 no-repeat;}
+			.btn_search{float: right; margin-top: 63px; width: 13px; height: 17px; background: url(img/btn_search.png) 0 0 no-repeat; margin-right: 8px;}
+			.search{float: right; width: 200px; height: 28px; margin-top: 56px; background: url(img/search.png) 0 0 no-repeat;}
+				.search input{font: 12px Helvetica, Tahoma; background: none; padding: 4px 5px 3px 6px; margin: 1px; border: none; color: rgb(197, 197, 197);}
+.calendar{width: 900px; margin: auto; padding-top: 11px;}
+	.btn_left_month, #month, #year, .btn_right_month, .btn_today{float:left; margin-bottom: 13px;}
+	.btn_left_month{width: 17px; height: 17px; background: url(img/arrow_left.png) 0 0 no-repeat;}
+	#month, #year{margin: 0 8px 0 5px; font: 16px Helvetica, Tahoma; line-height: 18px;}
+	 #year{margin: 0 8px 0 0px;}
+	.btn_right_month{width: 17px; height: 17px; background: url(img/arrow_right.png) 0 0 no-repeat;}
+	.btn_today{width: 57px; height: 17px; margin-left: 9px; background: url(img/btn_today.png) 0 0 no-repeat;}
+	.cells_all{position: absolute; border-top: 1px solid rgb(230, 230, 231); border-left: 1px solid rgb(230, 230, 231); width: 896px;}	
+		.cell{position:relative; padding: 7px 0 0 6px; float:left; width:121px; height:111px; border-right: 1px solid rgb(230, 230, 231); border-bottom: 1px solid rgb(230, 230, 231); word-wrap: break-word;}
+		.day_last{width: 128px;}
+		.day_current{background-color: rgb(244,244,244);}
+		.day_current span{font-weight:bold; color:rgb(143,143,143);}
+		.day_event{background-color: rgb(194,228,254);}
+.day_date{display: block; float: left; font: 11px Helvetica, Tahoma; color: rgb(175, 175, 173);}
+.day_number{display: block; float: left; font: 11px Helvetica, Tahoma; color: rgb(175, 175, 173);}
+.btn_add:hover, .btn_update:hover, .btn_search:hover, .btn_left_month:hover, .btn_right_month:hover , .btn_today:hover{cursor: pointer;}
+.event_txt{font: 11px Helvetica, Tahoma; display: block; line-height: 16px; width: 115px;}
+
+.create_form{top: 86px; z-index: 9999999; position: absolute; left: 2px; padding-top:12px;}
+	.create_form .corner{width:27px; height:12px; position:absolute; left:20px; top:0; background:url(img/corner_top.png) no-repeat; z-index: 20;}
+	.create_form_block{width: 282px; height: 80px; box-shadow:0 0 6px rgb(150,150,150); background:#FFF; padding:23px 0 0 22px; position: relative;}
+	.create{position: relative; background: url(img/inp_create.png) -3px -4px no-repeat; height: 34px;}
+		.create input{font: 12px Helvetica, Tahoma; background: none; padding: 4px 5px 3px 6px; margin: 1px; border: none; color: rgb(197, 197, 197);}
+		.btn_create{width: 71px; height: 25px; border: none; background: url(img/btn_create.png) 0 0 no-repeat; margin-left: -4px;}
+		
+		
+		
+.hover_left, .hover_right, .hover_bottom_left, .hover_bottom_right{position:absolute; z-index:10;}
+.hover_left{padding-left:12px; top:-15px; right:-317px;}
+.hover_right{padding-right:11px; top:-15px; left:-317px;}
+.hover_bottom_left{padding-left:12px; bottom:-15px; right:-317px;}
+.hover_bottom_right{padding-right:11px; bottom:-15px; left:-317px;}
+
+.hover_corner{width:12px; height:27px; position:absolute; z-index: 20;}
+.hover_left .hover_corner{left:0; top:20px; background:url(img/corner_left.png) no-repeat;}
+.hover_right .hover_corner{right:0; top:20px; background:url(img/corner_right.png) no-repeat;}
+.hover_bottom_left .hover_corner{left:0; bottom:20px; background:url(img/corner_left.png) no-repeat;}
+.hover_bottom_right .hover_corner{right:0; bottom:20px; background:url(img/corner_right.png) no-repeat;}
+
+.hover_block{width:281px; height:306px; box-shadow:0 0 10px rgb(150,150,150); background:#FFF; padding:23px 0 0 21px; position: relative;}
+
+.hover_block input[type="text"]{background:url(img/input.png) no-repeat; width:246px; height:19px; border:none; margin:0 0 5px 0;
+font: 12px Helvetica, Tahoma; padding: 4px 5px 3px 6px; color: rgb(197, 197, 197);}
+
+.hover_block .input_title{font-size:14px!important; height:21px!important; padding: 3px 5px 2px 6px!important;}
+
+.hover_block textarea {background:url(img/textarea.png) no-repeat; margin:32px 0 22px 0; height:109px; width:246px; border: none;
+font: 12px Helvetica, Tahoma; padding: 4px 5px 3px 6px; color: rgb(197, 197, 197);}
+
+.hover_block input[type="submit"]{padding:2px 5px; margin:0 12px 0 0;}		
+
+.ref_close{position: absolute; width: 20px; height: 20px; top: 6px; background: url(img/close.png) no-repeat; right: 0;}
+
+.search_suggestions{top: 86px; z-index: 30; position: absolute; right: -14px; padding-top:12px;}
+	.search_suggestions .corner{width:27px; height:12px; position:absolute; left:20px; top:0; background:url(img/corner_top.png) no-repeat;}
+	.search_suggestions_block{padding:4px; background: #FFF; box-shadow:0 0 6px rgb(150,150,150);}
+		.search_suggestions_scroll{width:205px; height:384px;}
+		.search_suggestions_block .suggestion{height:36px; width: 179px; padding: 5px 0 0 8px;}
+		.search_suggestions_block .suggestion_title{font: bold 13px Helvetica, Tahoma; color: #000;}
+		.search_suggestions_block .suggestion_date{font: 11px Helvetica, Tahoma; color:#8C8C8C;}
+		.search_suggestions_block .selected{background: #27A1FF;}
+		.search_suggestions_block .selected div{color:#FFF;}
+		.search_suggestions_block .separator{height:3px; width: 180px; border-bottom:1px #EBEBEB solid; margin: 0 0 3px 4px;}
